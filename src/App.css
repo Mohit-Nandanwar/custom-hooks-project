@@ -1,0 +1,92 @@
+body {
+  background-color: rgb(255, 253, 253); /* same as screenshot */
+  color: rgb(0, 0, 0);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.loading {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+}
+
+.play-button {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.play-button:hover {
+  cursor: pointer;
+
+}
+
+.error {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+}
+
+.gallery h1 {
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px; /* slightly more space between cards */
+  justify-items: center;
+  padding: 20px;
+}
+
+.card {
+  width: 180px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(0, 0, 0); /* outer white border */
+  background-color: black; /* background same as image */
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.inner-box {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(0, 0, 0); /* inner thin border */
+  padding: 5px;
+}
+
+.placeholder {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.placeholder {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: 5px;
+}
