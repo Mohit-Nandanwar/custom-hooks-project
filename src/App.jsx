@@ -1,12 +1,18 @@
 import "./App.css";
-import PhotoGallery from "./components/PhotoGallery";
-import PhotoTitles from "./components/PhotoTitles";
+import { useCart } from "./context/CartContext";
+import ShoeStore from "./components/ShoeStore";
+import CartPage from "./components/CartPage";
+import PaymentPage from "./components/PaymentPage";
 
 function App() {
+  // useContext usage: reading currentPage from CartContext
+  const { currentPage } = useCart();
+
   return (
     <>
-      <PhotoGallery />
-      <PhotoTitles />
+      {currentPage === "store" && <ShoeStore />}
+      {currentPage === "cart" && <CartPage />}
+      {currentPage === "payment" && <PaymentPage />}
     </>
   );
 }
